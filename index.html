@@ -3,7 +3,7 @@
 <head>
   <!--
     CSC Homepage Alpha Build
-    Last Updated: 22 May 2026 @ 14:12:45Z UTC
+    Last Updated: 22 May 2026 @ 14:47:47Z UTC
     Copyright © 2026 Cook Services Company, LLC | All Rights Reserved.
   -->
   <meta charset="utf-8">
@@ -12,7 +12,7 @@
   <meta name="description" content="Cook Services Company, LLC is a privately held operating and investment company building practical companies, useful technology, and long-term value.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07172f">
-  <meta name="build" content="CSC Homepage Alpha Build | 22 May 2026 @ 14:12:45Z UTC">
+  <meta name="build" content="CSC Homepage Alpha Build | 22 May 2026 @ 14:47:46Z UTC">
   <link rel="canonical" href="https://www.cook-international.com/">
 
   <meta property="og:title" content="Cook Services Company, LLC">
@@ -73,7 +73,7 @@
     .skip-link:focus { top: 16px; }
 
     .shell {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1160px, calc(100% - 32px));
       margin: 0 auto;
     }
 
@@ -87,31 +87,32 @@
     }
 
     .topbar-inner {
-      min-height: 82px;
+      min-height: 132px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 22px;
+      gap: 24px;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
       text-decoration: none;
       min-width: 0;
     }
 
     .brand-logo,
     .footer-logo {
-      width: 58px;
-      height: 58px;
+      width: 122px;
+      height: 122px;
       object-fit: contain;
-      padding: 6px;
+      padding: 7px;
       background: #fff;
       border: 1px solid rgba(201, 151, 43, 0.45);
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(7, 23, 47, 0.13);
+      border-radius: 22px;
+      box-shadow: 0 18px 38px rgba(7, 23, 47, 0.15);
+      flex: 0 0 auto;
     }
 
     .brand-name {
@@ -120,7 +121,7 @@
       font-weight: 950;
       letter-spacing: -0.015em;
       line-height: 1.05;
-      font-size: clamp(17px, 2.2vw, 22px);
+      font-size: clamp(19px, 2.25vw, 25px);
       white-space: nowrap;
     }
 
@@ -158,12 +159,12 @@
     main { padding-bottom: 72px; }
 
     .hero {
-      min-height: 620px;
+      min-height: 650px;
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
       gap: 34px;
       align-items: center;
-      padding: 58px 0 38px;
+      padding: 56px 0 40px;
     }
 
     .eyebrow {
@@ -217,7 +218,8 @@
       font-size: 16px;
     }
 
-    .actions {
+    .actions,
+    .contact-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -236,11 +238,12 @@
       font-weight: 900;
       font-size: 14px;
       transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+      cursor: pointer;
     }
 
-    .btn:hover { transform: translateY(-1px); }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
     .btn-primary {
-      background: var(--csc-navy);
+      background: linear-gradient(135deg, var(--csc-navy), #16396f);
       color: #fff;
       box-shadow: 0 18px 42px rgba(7, 23, 47, 0.22);
     }
@@ -250,62 +253,85 @@
       color: #241804;
       box-shadow: 0 18px 42px rgba(201, 151, 43, 0.22);
     }
-
-    .hero-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 485px;
-      border-radius: 36px;
-      background:
-        linear-gradient(145deg, rgba(7, 23, 47, 0.96), rgba(13, 36, 72, 0.88)),
-        url('/monumentcircle01.jpg') center/cover;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: var(--csc-shadow);
-      display: grid;
-      place-items: center;
-      padding: 26px;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 22% 12%, rgba(246, 215, 127, 0.42), transparent 18rem),
-        linear-gradient(180deg, rgba(7, 23, 47, 0.1), rgba(7, 23, 47, 0.76));
-    }
-
-    .hero-logo-lockup {
-      position: relative;
-      z-index: 1;
-      width: min(360px, 100%);
-      border-radius: 34px;
-      background: rgba(255, 255, 255, 0.94);
-      border: 1px solid rgba(201, 151, 43, 0.45);
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.25);
-      padding: 30px;
-      text-align: center;
-    }
-
-    .hero-logo-lockup img {
-      width: min(238px, 82%);
-      margin: 0 auto;
-      object-fit: contain;
-    }
-
-    .hero-logo-lockup span {
-      display: block;
-      margin-top: 18px;
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.9);
       color: var(--csc-navy);
-      font-weight: 950;
-      letter-spacing: -0.03em;
-      font-size: 23px;
-      line-height: 1.12;
+      border-color: var(--csc-line);
     }
 
-    .section {
-      padding: 54px 0;
+    .hero-media {
+      position: relative;
+      min-height: 580px;
     }
+
+    .image-stack {
+      position: relative;
+      height: 100%;
+      min-height: 580px;
+    }
+
+    .photo-card {
+      position: absolute;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: var(--csc-shadow);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-main { inset: 10px 0 135px 60px; }
+
+    .photo-secondary {
+      width: 52%;
+      height: 210px;
+      left: 0;
+      bottom: 52px;
+      z-index: 2;
+    }
+
+    .photo-third {
+      width: 44%;
+      height: 170px;
+      right: 20px;
+      bottom: 10px;
+      z-index: 3;
+    }
+
+    .stat-card {
+      position: absolute;
+      z-index: 4;
+      right: 0;
+      top: 72px;
+      width: min(288px, 80%);
+      border-radius: 24px;
+      background: rgba(255, 250, 241, 0.92);
+      border: 1px solid rgba(201, 151, 43, 0.35);
+      box-shadow: var(--csc-shadow);
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .stat-card strong {
+      display: block;
+      color: var(--csc-navy);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .stat-card span {
+      color: var(--csc-muted);
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .section { padding: 54px 0; }
 
     .section-head {
       display: flex;
@@ -354,19 +380,19 @@
 
     .brand-grid {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 20px;
     }
 
     .brand-card {
       position: relative;
-      min-height: 310px;
+      min-height: 430px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 22px;
+      padding: 24px;
       border-radius: var(--csc-radius);
-      background: rgba(255, 255, 255, 0.84);
+      background: rgba(255, 255, 255, 0.86);
       border: 1px solid var(--csc-line);
       box-shadow: 0 16px 46px rgba(7, 23, 47, 0.10);
       text-decoration: none;
@@ -378,15 +404,16 @@
       transform: translateY(-4px);
       box-shadow: 0 28px 72px rgba(7, 23, 47, 0.16);
       border-color: rgba(201, 151, 43, 0.52);
+      text-decoration: none;
     }
 
     .brand-card::after {
       content: "";
       position: absolute;
-      width: 170px;
-      height: 170px;
-      right: -80px;
-      top: -80px;
+      width: 190px;
+      height: 190px;
+      right: -85px;
+      top: -85px;
       border-radius: 999px;
       background: radial-gradient(circle, rgba(201,151,43,0.18), transparent 70%);
       pointer-events: none;
@@ -395,27 +422,28 @@
     .brand-logo-box {
       position: relative;
       z-index: 1;
-      height: 86px;
+      height: 230px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #fff;
-      border-radius: 20px;
+      border-radius: 22px;
       border: 1px solid rgba(7, 23, 47, 0.10);
-      padding: 12px;
+      padding: 18px;
     }
 
     .brand-logo-box img {
-      max-height: 62px;
+      max-height: 198px;
+      max-width: 98%;
       width: auto;
       object-fit: contain;
       margin: 0 auto;
     }
 
     .brand-card h3 {
-      margin: 22px 0 0;
+      margin: 24px 0 0;
       color: var(--csc-navy);
-      font-size: 21px;
+      font-size: 22px;
       line-height: 1.1;
       letter-spacing: -0.035em;
     }
@@ -443,15 +471,94 @@
       font-size: 14px;
     }
 
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--csc-line);
+      border-radius: var(--csc-radius);
+      padding: 28px;
+      box-shadow: 0 18px 42px rgba(11, 20, 38, 0.08);
+    }
+
+    .contact-card address {
+      font-style: normal;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    .contact-card strong { color: var(--csc-navy); }
+
+    .contact-note {
+      color: var(--csc-muted);
+      margin-top: 16px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .contact-form {
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      margin: 0 0 6px;
+      font-weight: 850;
+      color: var(--csc-navy);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid rgba(7, 23, 47, 0.18);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font: inherit;
+      background: #fff;
+      color: var(--csc-ink);
+    }
+
+    textarea { resize: vertical; }
+
+    .contact-image {
+      border-radius: var(--csc-radius);
+      overflow: hidden;
+      min-height: 420px;
+      box-shadow: var(--csc-shadow);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      background: #fff;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     footer {
-      background: var(--csc-navy);
+      background: linear-gradient(135deg, #040a14, var(--csc-navy));
       color: #fff;
-      padding: 34px 0;
+      padding: 36px 0 28px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.1fr 1.2fr;
+      grid-template-columns: minmax(240px, 1fr) minmax(240px, 1.2fr) minmax(220px, 0.8fr);
       gap: 28px;
       align-items: start;
     }
@@ -479,75 +586,95 @@
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-end;
+      justify-content: flex-start;
       gap: 10px 16px;
     }
 
-    .footer-links a {
+    .footer-links a,
+    .footer-contact a {
       color: rgba(255, 255, 255, 0.84);
       text-decoration: none;
       font-weight: 760;
       font-size: 14px;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-contact a:hover {
       color: #fff;
       text-decoration: underline;
     }
 
+    .footer-contact {
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.7;
+      font-size: 13px;
+    }
+
     .copyright {
-      margin-top: 26px;
+      margin-top: 28px;
       padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.14);
       color: rgba(255, 255, 255, 0.62);
-      font-size: 13px;
+      font-size: 12px;
       display: flex;
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
     }
 
-    @media (max-width: 1040px) {
-      .brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .brand-card:last-child { grid-column: 1 / -1; }
-    }
-
-    @media (max-width: 920px) {
-      .topbar-inner {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 12px 0;
-      }
-
-      .brand { justify-content: center; }
-      .nav { justify-content: center; }
-      .hero {
+    @media (max-width: 980px) {
+      .hero,
+      .contact-wrap {
         grid-template-columns: 1fr;
-        min-height: auto;
-        padding-top: 38px;
       }
-      .hero-card { min-height: 390px; }
+
+      .hero { min-height: auto; }
+      .hero-media,
+      .image-stack { min-height: 500px; }
       .section-head { display: block; }
       .section-head p { margin-top: 12px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .footer-links { justify-content: flex-start; }
     }
 
-    @media (max-width: 640px) {
-      .shell { width: min(100% - 22px, 1120px); }
-      .brand-logo, .footer-logo {
-        width: 54px;
-        height: 54px;
-        border-radius: 17px;
+    @media (max-width: 760px) {
+      .topbar-inner {
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
       }
-      .brand-name { white-space: normal; }
+
+      .brand { justify-content: center; }
+      .brand-logo, .footer-logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+      }
+      .brand-name { font-size: 17px; white-space: normal; }
+      .nav { justify-content: center; }
       .nav a { font-size: 12px; padding: 9px 10px; }
+      .hero { padding-top: 38px; }
       h1 { font-size: clamp(42px, 14vw, 60px); }
-      .actions, .actions .btn { width: 100%; }
-      .brand-grid { grid-template-columns: 1fr; }
-      .brand-card:last-child { grid-column: auto; }
-      .hero-logo-lockup { padding: 24px; }
+      .actions, .actions .btn, .contact-actions .btn { width: 100%; }
+      .hero-media,
+      .image-stack { min-height: 430px; }
+      .photo-main { inset: 0 0 120px 22px; }
+      .photo-secondary { width: 58%; height: 180px; bottom: 36px; }
+      .photo-third { width: 48%; height: 145px; right: 0; }
+      .stat-card { top: 22px; right: 8px; width: min(250px, 76%); }
+      .brand-card { min-height: 390px; }
+      .brand-logo-box { height: 200px; }
+      .brand-logo-box img { max-height: 170px; }
       .footer-brand { align-items: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 22px, 1160px); }
+      .photo-main { inset: 0 0 120px 0; }
+      .photo-secondary { width: 62%; left: 0; }
+      .photo-third { width: 54%; }
+      .stat-card { width: min(238px, 82%); }
+      .contact-image { min-height: 300px; }
     }
   </style>
 
@@ -558,6 +685,8 @@
     "name": "Cook Services Company, LLC",
     "url": "https://www.cook-international.com/",
     "logo": "https://www.cook-international.com/CSCLogo01.png",
+    "email": "cookservicescompany@gmail.com",
+    "telephone": "+1-317-442-1437",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "151 N. Delaware Street, Suite 122",
@@ -591,7 +720,8 @@
         <a href="#brands">Brands</a>
         <a href="https://corporate.cook-international.com/investors/">Investors</a>
         <a href="https://corporate.cook-international.com/terms/">Terms</a>
-        <a class="nav-cta" href="https://corporate.cook-international.com/privacy/">Privacy</a>
+        <a href="https://corporate.cook-international.com/privacy/">Privacy</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -615,13 +745,25 @@
         <div class="actions">
           <a class="btn btn-primary" href="#brands">View Our Brands</a>
           <a class="btn btn-gold" href="https://corporate.cook-international.com/investors/">Investor Resources</a>
+          <a class="btn btn-secondary" href="#contact">Contact Us</a>
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="Cook Services Company logo">
-        <div class="hero-logo-lockup">
-          <img src="/CSCLogo01.png" alt="Cook Services Company logo">
-          <span>Cook Services Company, LLC</span>
+      <aside class="hero-media" aria-label="Cook Services Company Indianapolis imagery">
+        <div class="image-stack">
+          <div class="stat-card">
+            <strong>Indianapolis-based. Mission-driven.</strong>
+            <span>CSC builds, supports, and operates practical brands with disciplined execution and long-term value in mind.</span>
+          </div>
+          <figure class="photo-card photo-main">
+            <img src="https://www.cgnnews.net/downtown_indy.webp" alt="Downtown Indianapolis skyline" loading="eager">
+          </figure>
+          <figure class="photo-card photo-secondary">
+            <img src="https://corporate.cook-international.com/monumentcircle01.jpg" alt="Monument Circle in Indianapolis" loading="lazy">
+          </figure>
+          <figure class="photo-card photo-third">
+            <img src="https://www.cgnnews.net/Market_Square_Center,_Indianapolis.png" alt="Market Square Center in Indianapolis" loading="lazy">
+          </figure>
         </div>
       </aside>
     </section>
@@ -703,6 +845,62 @@
         </a>
       </div>
     </section>
+
+    <section class="shell section" id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact Us</h2>
+        <p>For corporate inquiries, business correspondence, portfolio matters, or general information, contact Cook Services Company using the details below.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <address>
+            <strong>Cook Services Company, LLC</strong><br>
+            Market Square Center<br>
+            151 N. Delaware Street<br>
+            Suite 122<br>
+            Indianapolis, IN 46204<br>
+            <a href="tel:+13174421437">(317) 442-1437</a><br>
+            <a href="mailto:cookservicescompany@gmail.com">cookservicescompany@gmail.com</a>
+          </address>
+          <p class="contact-note">
+            This website provides general corporate information about Cook Services Company, LLC and its family of brands. Portfolio brands maintain their own customer-facing terms, policies, support channels, and operating information.
+          </p>
+
+          <form class="contact-form" onsubmit="sendCSCContactMessage(event)" aria-label="Send a message to Cook Services Company">
+            <div>
+              <label for="csc-contact-subject">Subject</label>
+              <input id="csc-contact-subject" name="subject" type="text" required placeholder="Message subject">
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="csc-contact-first-name">First Name</label>
+                <input id="csc-contact-first-name" name="first_name" type="text" required placeholder="First name">
+              </div>
+              <div>
+                <label for="csc-contact-last-name">Last Name</label>
+                <input id="csc-contact-last-name" name="last_name" type="text" required placeholder="Last name">
+              </div>
+            </div>
+
+            <div>
+              <label for="csc-contact-message">Message</label>
+              <textarea id="csc-contact-message" name="message" rows="6" required placeholder="Write your message here"></textarea>
+            </div>
+
+            <div class="contact-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <a class="btn btn-secondary" href="mailto:cookservicescompany@gmail.com?subject=Cook%20Services%20Company%20Inquiry">Email CSC</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-image">
+          <img src="https://www.cgnnews.net/Market_Square_Center,_Indianapolis.png" alt="Market Square Center, Indianapolis" loading="lazy">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer aria-label="Site footer">
@@ -727,17 +925,48 @@
           <a href="https://corporate.cook-international.com/terms/">Terms of Service</a>
           <a href="https://corporate.cook-international.com/privacy/">Privacy Policy</a>
         </nav>
+
+        <div class="footer-contact">
+          Market Square Center<br>
+          151 N. Delaware Street, Suite 122<br>
+          Indianapolis, IN 46204<br>
+          <a href="tel:+13174421437">(317) 442-1437</a><br>
+          <a href="mailto:cookservicescompany@gmail.com">cookservicescompany@gmail.com</a>
+        </div>
       </div>
 
       <div class="copyright">
         <span>Copyright © <span id="year">2026</span> Cook Services Company, LLC | All Rights Reserved.</span>
-        <span>Last Updated on 22 May 2026 at 14:30:15Z</span>
+        <span>Last Updated on 22 May 2026 at 14:47:47Z</span>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendCSCContactMessage(event) {
+      event.preventDefault();
+
+      const subject = document.getElementById('csc-contact-subject').value.trim();
+      const firstName = document.getElementById('csc-contact-first-name').value.trim();
+      const lastName = document.getElementById('csc-contact-last-name').value.trim();
+      const message = document.getElementById('csc-contact-message').value.trim();
+
+      const body = [
+        'First Name: ' + firstName,
+        'Last Name: ' + lastName,
+        '',
+        'Message:',
+        message
+      ].join('\n');
+
+      const mailto = 'mailto:cookservicescompany@gmail.com'
+        + '?subject=' + encodeURIComponent(subject || 'Cook Services Company Website Message')
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    }
   </script>
 </body>
 </html>
