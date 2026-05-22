@@ -3,7 +3,7 @@
 <head>
   <!--
     CSC Homepage Alpha Build
-    Last Updated: 22 May 2026 @ 15:41:19Z UTC
+    Last Updated: 22 May 2026 @ 20:17:35Z UTC
     Copyright © 2026 Cook Services Company, LLC | All Rights Reserved.
   -->
   <meta charset="utf-8">
@@ -12,7 +12,7 @@
   <meta name="description" content="Cook Services Company, LLC is a privately held operating and investment company building practical companies, useful technology, and long-term value.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07172f">
-  <meta name="build" content="CSC Homepage Alpha Build | 22 May 2026 @ 15:41:19Z UTC">
+  <meta name="build" content="CSC Homepage Alpha Build | 22 May 2026 @ 20:17:35Z UTC">
   <link rel="canonical" href="https://www.cook-international.com/">
 
   <meta property="og:title" content="Cook Services Company, LLC">
@@ -622,6 +622,24 @@
       flex-wrap: wrap;
     }
 
+    .copyright-link {
+      color: rgba(255, 255, 255, 0.62);
+      text-decoration: none;
+      font-weight: 760;
+    }
+
+    .copyright-link:hover,
+    .copyright-link:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .copyright-link:focus-visible {
+      outline: 2px solid rgba(244, 212, 132, 0.95);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
     @media (max-width: 980px) {
       .hero,
       .contact-wrap {
@@ -947,10 +965,11 @@
           <a href="mailto:cookservicescompany@gmail.com">cookservicescompany@gmail.com</a>
         </div>
       </div>
-
       <div class="copyright">
-        <span>Copyright © <span id="year">2026</span> Cook Services Company, LLC | All Rights Reserved.</span>
-        <span>Last Updated on 22 May 2026 at 15:41:19Z</span>
+        <a class="copyright-link" href="/copyright/" aria-label="View Cook Services Company copyright, trademark, and intellectual property notice">
+          Copyright © <span id="year">2026</span> Cook Services Company, LLC | All Rights Reserved.
+        </a>
+        <span>Last Updated on 22 May 2026 at 20:17:35Z</span>
       </div>
     </div>
   </footer>
